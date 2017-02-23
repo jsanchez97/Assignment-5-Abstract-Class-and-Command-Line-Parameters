@@ -12,10 +12,6 @@
 
 class Square : public Shape
 {
-
-	friend void PrintPerimeter(Square square);
-	friend void PrintArea(Square square);
-
 public:
 	Square();
 	Square(float side);
@@ -28,6 +24,7 @@ private:
 	float side;
 };
 
-
+void PrintPerimeter(Square square);
+void PrintArea(Square square);
 
 #endif /* SQUARE_H_ */

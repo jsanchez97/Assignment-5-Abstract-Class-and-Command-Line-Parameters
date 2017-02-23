@@ -12,9 +12,6 @@
 
 class Triangle : public Shape
 {
-	friend void PrintPerimeter(Triangle triangle);
-	friend void PrintArea(Triangle triangle);
-
 public:
 	Triangle();
 	Triangle(float side1, float side2, float side3);
@@ -28,5 +25,8 @@ private:
 	float side2;
 	float side3;
 };
+
+void PrintPerimeter(Triangle triangle);
+void PrintArea(Triangle triangle);
 
 #endif
