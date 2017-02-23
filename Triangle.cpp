@@ -7,12 +7,36 @@
 
 #include "Triangle.h"
 
+/******************************************************************************
+ * PrintPerimeter
+ * ----------------------------------------------------------------------------
+ * This friend function prints the perimeter of a Triangle object by having the
+ * object that was passed in call the CalcPerimeter function.
+ * ----------------------------------------------------------------------------
+ * PRE-CONDITIONS:
+ *     triangle - Sides of Triangle must be defined.
+ *
+ * POST-CONDITIONS:
+ *     Prints the perimeter of a Triangle object.
+ *****************************************************************************/
 void PrintPerimeter(Triangle triangle)
 {
 	cout << fixed << setprecision(2) << endl
 		 << "Perimeter: " << triangle.CalcPerimeter() << endl;
 }
 
+/******************************************************************************
+ * PrintArea
+ * ----------------------------------------------------------------------------
+ * This friend function prints the area of a Triangle object by having the
+ * object that was passed in call the CalcArea function.
+ * ----------------------------------------------------------------------------
+ * PRE-CONDITIONS:
+ *     triangle - Sides of Triangle must be defined.
+ *
+ * POST-CONDITIONS:
+ *     Prints the area of a Triangle object.
+ *****************************************************************************/
 void PrintArea(Triangle triangle)
 {
 	cout << fixed << setprecision(2)
@@ -41,11 +65,35 @@ void Triangle::SetSides(float side1, float side2, float side3)
 	this->side3 = side3;
 }
 
+/******************************************************************************
+ * CalcPerimeter
+ * ----------------------------------------------------------------------------
+ * This function calculates the perimeter of a Triangle object by adding the
+ * lengths of all of the sides and returns the result.
+ * ----------------------------------------------------------------------------
+ * PRE-CONDITIONS:
+ *     There are no pre-conditions.
+ *
+ * POST-CONDITIONS:
+ *     Calculates the area of a Triangle object.
+ *****************************************************************************/
 float Triangle::CalcPerimeter()
 {
 	return side1 + side2 + side3;
 }
 
+/******************************************************************************
+ * CalcArea
+ * ----------------------------------------------------------------------------
+ * This function calculates the area of a Triangle object using Heron's formula
+ * and returns the result.
+ * ----------------------------------------------------------------------------
+ * PRE-CONDITIONS:
+ *     There are no pre-conditions.
+ *
+ * POST-CONDITIONS:
+ *     Calculates the area of a Triangle object.
+ *****************************************************************************/
 float Triangle::CalcArea()
 {
 	float s = (side1 + side2 + side3) / 2.0;

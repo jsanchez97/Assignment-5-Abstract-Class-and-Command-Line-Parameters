@@ -22,10 +22,8 @@
  * second letter of each name.
  * ----------------------------------------------------------------------------
  * INPUT:
- *    side  : Length of sides of a square.
- *    side1 : Length of first side of a triangle.
- *    side2 : Length of first side of a triangle.
- *    side3 : Length of first side of a triangle.
+ *    side                : Length of sides of a square.
+ *    side1, side2, side3 : Lengths of sides of a triangle.
  *
  * OUTPUT:
  * 	  Perimeter and area of both shapes.
@@ -36,8 +34,8 @@ void PrintHeader(string labName, char labType, int labNum);
 
 int main(int argc, char *argv[])
 {
-	Square square;
-	Triangle triangle;
+	Square square;     // Square object.
+	Triangle triangle; // Triangle object.
 
 	float side;                // Length of sides of a Square.
 	float side1, side2, side3; // Length of sides of a Triangle object.
@@ -46,6 +44,8 @@ int main(int argc, char *argv[])
 
 	cout << setw(30) << "----- PART 1 -----" << endl << endl;
 
+	// Prompts the user to enter the length of a square's sides and ensures that
+	// the value entered is positive.
 	do
 	{
 		cout << "Enter the length of a side of the square: ";
@@ -58,11 +58,15 @@ int main(int argc, char *argv[])
 		}
 	}while(side <= 0);
 
+	// Sets the length of the square's sides.
 	square.SetSides(side);
 
+	// Prints the perimeter of the square.
 	PrintPerimeter(square);
 	PrintArea(square);
 
+	// Prompts the user for the lengths of the sides of the triangle and ensures
+	// that the values entered are positive at each step.
 	do
 	{
 		cout << "Enter the length of the first side of the triangle: ";
@@ -99,8 +103,10 @@ int main(int argc, char *argv[])
 		}
 	}while(side3 <= 0);
 
+	// Sets the values of the sides of the triangle.
 	triangle.SetSides(side1, side2, side3);
 
+	// Prints the perimeter and area of the triangle.
 	PrintPerimeter(triangle);
 	PrintArea(triangle);
 
@@ -108,6 +114,8 @@ int main(int argc, char *argv[])
 
 	cout << "My name is ";
 
+	// Offsets the index of argv and outputs the remaining parameters in the
+	// command line.
 	for(int index = 1; index < argc; index++)
 	{
 		cout << argv[index];
@@ -118,10 +126,13 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			cout << "." << endl;
+			cout << "." << endl << endl;
 		}
 	}
 
+	// Offsets the address that argv is pointing to, dereferences that, and then
+	// offsets the address one more time and dereferences that to print the
+	// second character in the string it is pointing to.
 	cout << "Second Letter in First Name: " << *(*(argv + 1) + 1) << endl
 		 << "Second Letter in Last Name: " << *(*(argv + 2) + 1) << endl;
 
