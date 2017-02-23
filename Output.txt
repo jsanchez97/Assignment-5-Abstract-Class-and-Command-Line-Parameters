@@ -1,0 +1,26 @@
+***************************************************************
+* PROGRAMMED BY  : Jesus Sanchez
+* STUDENT ID     : 1024834
+* CLASS          : MW: 1:30pm - 2:50pm
+* ASSIGNMENT #5  : Abstract Classes and Command Line Parameters
+***************************************************************
+
+            ----- PART 1 -----
+
+Enter the length of a side of the square: 4.66
+
+Perimeter: 18.64
+Area: 21.72
+
+Enter the length of the first side of the triangle: 7.0
+Enter the length of the second side of the triangle: 8.0
+Enter the length of the third side of the triangle: 2.0
+
+Perimeter: 17.00
+Area: 6.44
+
+            ----- PART 2 -----
+
+My name is Jesus Sanchez.
+Second Letter in First Name: e
+Second Letter in Last Name: a
